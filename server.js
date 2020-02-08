@@ -108,6 +108,7 @@ app.post(apiBaseUrl + '/addmembership', function (req, res) {
     secondryphone: req.body.secondryphone,
     membershipcategory: req.body.membershipcategory,
     paymentstatus: req.body.paymentstatus,
+    paymentid: req.body.paymentid,
     comments: req.body.comments,
     insertTimeStamp: new Date().toLocaleDateString('de', {year: 'numeric', month: '2-digit', day: '2-digit'}),
     updateTimeStamp: new Date().toLocaleDateString('de', {year: 'numeric', month: '2-digit', day: '2-digit'})
@@ -146,6 +147,7 @@ app.post(apiBaseUrl + '/updatemembership', function (req, res, next) {
     secondryphone: req.body.secondryphone,
     membershipcategory: req.body.membershipcategory,
     paymentstatus: req.body.paymentstatus,
+    paymentid: req.body.paymentid,
     comments: req.body.comments,
     insertTimeStamp: new Date(req.body.insertTimeStamp),
     updateTimeStamp: new Date().toLocaleDateString('de', {year: 'numeric', month: '2-digit', day: '2-digit'})
