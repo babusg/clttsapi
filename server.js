@@ -148,7 +148,7 @@ app.post(apiBaseUrl + '/updatemembership', function (req, res, next) {
     paymentstatus: req.body.paymentstatus,
     paymentid: req.body.paymentid,
     comments: req.body.comments,
-    insertTimeStamp: req.body.insertTimeStamp,
+    insertTimeStamp: new Date(req.body.insertTimeStamp),
     updateTimeStamp: new Date().toLocaleDateString('de', {year: 'numeric', month: '2-digit', day: '2-digit'})
   }
   MongoClient.connect(url, function (err, db) {
