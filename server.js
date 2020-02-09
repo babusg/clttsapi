@@ -151,10 +151,11 @@ app.post(apiBaseUrl + '/updatemembership', function (req, res, next) {
     comments: req.body.comments,
     insertTimeStamp: req.body.insertTimeStamp,
     updateTimeStamp: new Date().toLocaleDateString('en-US', {year: 'numeric', month: '2-digit', day: '2-digit',hour: '2-digit', minute: '2-digit'}),
+    spousename: req.body.spousename,
     spouseemail: req.body.spouseemail,
     kid1: req.body.kid1,
     kid2: req.body.kid2,
-    kid3: req.body.kid3,
+    kid3: req.body.kid3
   }
   MongoClient.connect(url, function (err, db) {
     if (err) {
