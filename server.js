@@ -49,9 +49,9 @@ app.get(apiBaseUrl + '/getmemberbyemail/:id', function (req, res) {
     try {
       var objectID = req.params.id
     } catch (error) {
-      console.log(error)
+        console.log(error)
     }
-    collection.findOne({ 'email': objectID }, function (err, result) {
+    collection.findOne({ 'primaryemail': objectID }, function (err, result) {
       if (err) {
         res.send('Error in Finding Collection' + err)
       } else {
@@ -59,7 +59,6 @@ app.get(apiBaseUrl + '/getmemberbyemail/:id', function (req, res) {
       }
       db.close()
     })
-    console.log('Connected successfully to server')
   })
 })
 
